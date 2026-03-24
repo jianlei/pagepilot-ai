@@ -281,6 +281,18 @@ select.input {
   cursor: pointer;
 }
 
+.api-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.api-link:hover {
+  text-decoration: underline;
+}
+
 .hidden {
   display: none !important;
 }

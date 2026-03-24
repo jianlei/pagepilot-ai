@@ -8,6 +8,7 @@ const API_PROVIDERS = {
       { value: 'gpt-3.5-turbo', label: 'GPT-3.5 Turbo' }
     ],
     keyUrl: 'https://platform.openai.com/api-keys',
+    affiliateUrl: 'https://platform.openai.com/api-keys',
     keyPrefix: 'sk-'
   },
   qwen: {
@@ -19,6 +20,7 @@ const API_PROVIDERS = {
       { value: 'qwen-max', label: 'Qwen Max' }
     ],
     keyUrl: 'https://dashscope.console.aliyun.com/manage',
+    affiliateUrl: 'https://dashscope.console.aliyun.com/manage',
     keyPrefix: 'sk-'
   }
 };
@@ -63,7 +65,7 @@ function updateModelSelect(provider) {
   const apiKeyLabel = document.getElementById('apiKeyLabel');
   const apiKeyDesc = document.getElementById('apiKeyDesc');
   const apiKeyHint = document.getElementById('apiKeyHint');
-  const openAiLink = document.getElementById('openAiLink');
+  const apiKeyLink = document.getElementById('apiKeyLink');
   
   if (!modelSelect || !providerInfo) return;
   
@@ -79,7 +81,7 @@ function updateModelSelect(provider) {
   if (apiKeyLabel) apiKeyLabel.textContent = providerInfo.name + ' API Key';
   if (apiKeyDesc) apiKeyDesc.textContent = `Enter your ${providerInfo.name} API key to use the AI assistant.`;
   if (apiKeyHint) apiKeyHint.textContent = `Get key: ${providerInfo.name}`;
-  if (openAiLink) openAiLink.href = providerInfo.keyUrl;
+  if (apiKeyLink) apiKeyLink.href = providerInfo.affiliateUrl || providerInfo.keyUrl;
 }
 
 async function loadApiKeyStatus() {

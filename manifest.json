@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "PagePilot AI",
+  "version": "1.0.0",
+  "description": "AI-powered sidebar for page summarization, writing assistance, and AI chat. Supports OpenAI and Qwen.",
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "48": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.openai.com/*",
+    "https://dashscope.aliyuncs.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "side_panel": {
+    "default_path": "src/sidebar/sidebar.html",
+    "default_title": "PagePilot AI"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "css": ["src/styles/content.css"]
+    }
+  ]
+}

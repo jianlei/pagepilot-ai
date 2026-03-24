@@ -7,9 +7,9 @@ An AI-powered sidebar extension for page summarization, writing assistance, and 
 - 📄 **Page Summarization** - One-click AI summary of any webpage
 - ✍️ **Writing Assistant** - Improve, shorten, or expand your text
 - 💬 **AI Chat** - Conversation with AI on any page
-- 🔒 **User-Owned API Key** - Your key, your usage, your cost
+- 🔒 **Privacy-First** - Your API key stays on your device
 - 🌍 **Multi-Provider** - Supports OpenAI and Alibaba Qwen
-- 🚀 **Freemium Model** - 10 free daily uses
+- ✨ **Free** - No usage limits
 
 ## Supported AI Providers
 
@@ -51,7 +51,7 @@ An AI-powered sidebar extension for page summarization, writing assistance, and 
 
 ## Usage Notes
 
-- Free tier: 10 requests per day
+- No usage limits
 - Each user provides their own API key
 - Users pay for their own AI API usage directly
 
@@ -60,7 +60,7 @@ An AI-powered sidebar extension for page summarization, writing assistance, and 
 ```
 pagepilot-ai/
 ├── manifest.json           # Extension manifest (V3)
-├── icons/                   # App icons (SVG)
+├── icons/                  # App icons (SVG)
 │   ├── icon.svg
 │   └── icon-16.svg
 ├── src/
